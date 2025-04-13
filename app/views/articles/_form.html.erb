@@ -1,0 +1,32 @@
+<div class="d-flex  mt-5">
+  <div class="card custom-card-form">
+    <div class="card-body">
+      <%= form_with(model: article, local: true, class: "custom-form") do |form| %>
+        <% if article.errors.any? %>
+          <div class="alert alert-danger">
+            <h4><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h4>
+            <ul>
+              <% article.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="mb-3">
+          <%= form.label :title, class: "form-label" %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.label :description, class: "form-label" %>
+          <%= form.text_area :description, class: "form-control description-box", rows: 5 %>
+        </div>
+
+        <div class="text-center">
+          <%= form.submit "Save Article", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

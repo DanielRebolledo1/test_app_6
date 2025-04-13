@@ -8,3 +8,290 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+@import "bootstrap";
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 90%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e2f; /* Fondo oscuro */
+}
+/* Cambia el color de fondo de la barra de navegación */
+.navbar {
+    background-color: #323244 !important; 
+}
+
+h1 {
+    color: #ffffff; /* Cambia el color del encabezado */
+}
+/* Cambia el color del texto del logo */
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Cambia el color de los enlaces de navegación */
+.nav-link {
+    color: #cccccc !important;
+}
+
+/* Cambia el color de los enlaces al pasar el mouse */
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Hace que el enlace abarque toda la card */
+.custom-card-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
+    display: block; /* Hace que el enlace abarque toda la card */
+  }
+  
+  /* Mantiene el efecto hover en la card */
+  .custom-card-link:hover .custom-card {
+    transform: translateY(-5px); /* Eleva la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  }
+
+/* Cambia el borde y redondea las esquinas de las tarjetas */
+.card {
+    border: 1px solid #ddd !important;
+    border-radius: 10px !important;
+}
+
+/* Cambia el color del botón principal */
+.btn-primary {
+    background-color: #464686 !important;
+    color: #fff !important; /* Texto negro para contraste */
+    border: none;
+    border-radius: 7px;
+}
+
+/* Cambia el color del botón principal al pasar el mouse */
+.btn-primary:hover {
+    background-color: #5a5ab3 !important;
+    
+}
+
+/* Estilo general para las cards */
+.custom-card {
+    background-color: #1e1e2f; /* Fondo oscuro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  /* Efecto hover para las cards */
+  .custom-card:hover {
+    transform: translateY(-5px); /* Eleva la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  }
+  
+  /* Encabezado de la card */
+  .custom-card-header {
+    background-color: #2a2a3b; /* Fondo ligeramente más oscuro */
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+  }
+  
+  /* Cuerpo de la card */
+  .custom-card-body {
+    padding: 16px;
+    font-size: 0.9rem;
+    color: #d1d1e0; /* Texto gris claro */
+  }
+  
+  /* Texto del cuerpo */
+  .custom-card-text {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Pie de la card */
+  .custom-card-footer {
+    background-color: #2a2a3b; /* Fondo igual al encabezado */
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+  }
+  
+  /* Botones */
+  .btn-primary {
+    background-color: #4caf50; /* Verde Material Design */
+    border-color: #4caf50;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    border-color: #45a049;
+  }
+  
+  .btn-success {
+    background-color: #464686 !important; 
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+  }
+  
+  .btn-success:hover {
+    background-color: #5a5ab3 !important;
+  }
+
+  .btn-warning {
+    background-color: #464686; /* Naranja Material Design */
+    border-color: #464686;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+  }
+    .btn-warning:hover {
+        background-color: #5a5ab3; /* Naranja más oscuro */
+        border-color: #5a5ab3;
+        color: #ffffff;
+    }
+
+/* Ajusta el diseño del formulario */
+.custom-form .form-control {
+    background-color: #2a2a3b; /* Fondo oscuro para los campos */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #444; /* Borde gris oscuro */
+  }
+  
+  .custom-form .form-control:focus {
+    background-color: #2a2a3b;
+    color: #ffffff;
+    border-color: #444481; /* Verde para el foco */
+    box-shadow: 0 0 5px rgba(55, 57, 150, 0.5); /* Sombra verde */
+  }
+  
+  /* Deshabilita el ajuste del campo de descripción */
+  .description-box {
+    resize: none; /* Evita que el usuario ajuste el tamaño */
+  }
+  .custom-card-form {
+    max-width: 600px; /* Ancho máximo de la card */
+    width: 100%; /* Asegura que sea responsiva */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    background-color: #1e1e2f; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+  }
+
+  .container {
+    flex: 1; /* Hace que el contenido principal crezca para ocupar el espacio restante */
+  }
+
+  /* Personaliza la tabla */
+.custom-table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  }
+  
+  .custom-table th, .custom-table td {
+    vertical-align: middle; /* Centra el contenido verticalmente */
+  }
+  
+  .custom-table th {
+    background-color: #2a2a3b; /* Fondo oscuro para el encabezado */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #343a40; /* Fondo más oscuro al pasar el mouse */
+  }
+  
+  .custom-table .btn {
+    font-size: 0.85rem; /* Tamaño más pequeño para los botones */
+  }
+
+  /* Contenedor del artículo */
+.article-container {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 15px;
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    margin-left: 1rem; /* Mueve el contenido un poco hacia la izquierda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  /* Título del artículo */
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333; /* Texto oscuro */
+    margin-bottom: 10px;
+  }
+  
+  /* Descripción del artículo */
+  .article-description {
+    font-size: 1rem;
+    color: #555; /* Texto gris */
+    line-height: 1.5;
+  }
+  /* Card personalizada para el artículo */
+.custom-article-card {
+    max-width: 400px;
+    background-color: #242438; /* Fondo oscuro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 20px;
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  /* Encabezado de la card */
+  .custom-article-header {
+    background-color: #2a2a3b; /* Fondo ligeramente más oscuro */
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+    text-align: center;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  /* Título del artículo */
+  .custom-article-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  /* Cuerpo de la card */
+  .custom-article-body {
+    padding: 16px;
+  }
+  
+  /* Campo del artículo */
+  .custom-article-field {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #d1d1e0; /* Texto gris claro */
+  }
+  
+  .custom-article-field strong {
+    color: #ffffff; /* Texto blanco para los títulos */
+  }
+  
+  /* El footer se mantiene al final */
+  footer {
+    background-color: #323244; /* Color de fondo del footer */
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer al final */
+  }

@@ -1,0 +1,15 @@
+<p class="text-success"><%= notice %></p>
+
+<%= render @article %>
+
+<div class="d-flex justify-content-start mt-4">
+  <%= link_to articles_path, class: "btn btn-primary btn-sm me-2", title: "Back to articles" do %>
+    <i class="fas fa-arrow-left"></i> Volver<!-- Ícono de volver -->
+  <% end %>
+  <%= link_to edit_article_path(@article), class: "btn btn-warning btn-sm me-2", title: "Edit this article" do %>
+    <i class="fas fa-edit"></i> Editar <!-- Ícono de edición -->
+  <% end %>
+  <%= button_to @article, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm", title: "Destroy this article" do %>
+    <i class="fas fa-trash"></i> Eliminar<!-- Ícono de eliminar -->
+  <% end %>
+</div>
